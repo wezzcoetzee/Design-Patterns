@@ -1,13 +1,5 @@
 namespace Flyweight;
 
-// Flyweight Interface
-public interface ICharacterStyle
-{
-    void DisplayCharacter(char character);
-}
-
-
-// Flyweight Concrete
 public class CharacterStyle : ICharacterStyle
 {
     private readonly string _font;

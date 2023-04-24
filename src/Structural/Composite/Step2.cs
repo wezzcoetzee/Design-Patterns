@@ -1,10 +1,5 @@
 namespace Composite;
 
-public interface IMenuComponent
-{
-    void Print();
-}
-
 public class MenuItem : IMenuComponent
 {
     private readonly string _name;

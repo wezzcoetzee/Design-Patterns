@@ -1,11 +1,5 @@
 namespace Decorator;
 
-public interface ICoffee
-{
-    string GetDescription();
-    double GetCost();
-}
-
 public class Espresso : ICoffee
 {
     public string GetDescription()

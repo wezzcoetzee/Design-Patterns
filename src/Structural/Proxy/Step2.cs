@@ -1,10 +1,5 @@
 namespace Proxy;
 
-public interface IVideo
-{
-    void Play();
-}
-
 public class RealVideo : IVideo
 {
     private readonly string _filename;

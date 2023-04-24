@@ -1,6 +1,5 @@
 namespace Flyweight;
 
-// Flyweight Factory
 public class CharacterStyleFactory
 {
     private readonly Dictionary<string, CharacterStyle> _styles = new Dictionary<string, CharacterStyle>();
