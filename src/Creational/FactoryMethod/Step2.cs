@@ -1,11 +1,5 @@
 namespace FactoryMethod;
 
-public interface IVehicle
-{
-    void DisplayInfo();
-    double CalculateCost(double distance);
-}
-
 public class Car : IVehicle
 {
     public void DisplayInfo()
@@ -15,7 +9,7 @@ public class Car : IVehicle
 
     public double CalculateCost(double distance)
     {
-        var costPerMile = 0.5;
+        const double costPerMile = 0.5;
         return distance * costPerMile;
     }
 }
@@ -29,7 +23,7 @@ public class Truck : IVehicle
 
     public double CalculateCost(double distance)
     {
-        var costPerMile = 1.2;
+        const double costPerMile = 1.2;
         return distance * costPerMile;
     }
 }

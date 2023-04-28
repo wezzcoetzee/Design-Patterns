@@ -4,7 +4,7 @@ public abstract class VehicleFactory
 {
     public abstract IVehicle CreateVehicle();
 
-    public static VehicleFactory GetFactory(string? vehicleType)
+    public static VehicleFactory GetFactory(string vehicleType)
     {
         return vehicleType switch
         {

@@ -1,10 +1,5 @@
 namespace Bridge;
 
-public interface IMessageSender
-{
-    void SendMessage(string content);
-}
-
 public class EmailSender : IMessageSender
 {
     public void SendMessage(string content)

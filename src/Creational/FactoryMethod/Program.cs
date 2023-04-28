@@ -5,6 +5,9 @@ var vehicleType = Console.ReadLine();
 
 try
 {
+    if (string.IsNullOrEmpty(vehicleType))
+        throw new ArgumentNullException();
+
     var factory = VehicleFactory.GetFactory(vehicleType);
     var vehicle = factory.CreateVehicle();
 

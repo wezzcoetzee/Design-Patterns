@@ -1,11 +1,7 @@
 ﻿using Adapter;
 
-var payPalProvider = new PaypalProvider();
-var payPalAdapter = new PayPalAdapter(payPalProvider);
-var salesProvider = new SalesProvider();
+var payPalApi = new PayPalApi();
+IPaymentProcessor payPalAdapter = new PayPalAdapter(payPalApi);
+var app = new ECommerceApp();
     
-salesProvider.ProcessPayment(payPalAdapter, 420m);
-
-var stripeProvider = new StripeProvider();
-var stripeAdapter = new StripeAdapter(stripeProvider);
-salesProvider.ProcessPayment(stripeAdapter, 69m);
+app.ProcessPayment(payPalAdapter, 100m);

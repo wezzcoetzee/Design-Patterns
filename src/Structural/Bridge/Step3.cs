@@ -1,17 +1,5 @@
 namespace Bridge;
 
-public abstract class Message
-{
-    protected readonly IMessageSender MessageSender;
-
-    protected Message(IMessageSender messageSender)
-    {
-        MessageSender = messageSender;
-    }
-
-    public abstract void Send();
-}
-
 public class TextMessage : Message
 {
     private readonly string _content;
