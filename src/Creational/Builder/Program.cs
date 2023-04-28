@@ -1,10 +1,10 @@
 ﻿using Builder;
 
-var car = new Car.CarBuilder()
-    .SetMake("Toyota")
-    .SetModel("Camry")
-    .SetYear(2023)
-    .SetColor("Blue")
+var myPizza = new Pizza.PizzaBuilder()
+    .WithDough("Thin crust")
+    .WithSauce("Marinara")
+    .WithToppings("Pepperoni, Olives")
+    .AddExtraCheese(true)
     .Build();
 
-Console.WriteLine($"Car details: {car.Make}, {car.Model}, {car.Year}, {car.Color}");
+Console.WriteLine($"Pizza details: {myPizza.Dough}, {myPizza.Sauce}, {myPizza.Toppings}, Extra cheese: {myPizza.IsExtraCheese}");

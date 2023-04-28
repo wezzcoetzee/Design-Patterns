@@ -1,10 +1,5 @@
 namespace Strategy;
 
-public interface IShippingCostStrategy
-{
-    decimal CalculateShippingCost(decimal packageWeight, string destination);
-}
-
 public class StandardShippingStrategy : IShippingCostStrategy
 {
     public decimal CalculateShippingCost(decimal packageWeight, string destination)

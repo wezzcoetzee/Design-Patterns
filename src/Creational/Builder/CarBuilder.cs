@@ -1,54 +1,54 @@
 namespace Builder;
 
-public class Car
+public class Pizza
 {
-    public string Make { get; set; }
-    public string Model { get; set; }
-    public int Year { get; set; }
-    public string Color { get; set; }
+    public string Dough { get; private set; }
+    public string Sauce { get; private set; }
+    public string Toppings { get; private set; }
+    public bool IsExtraCheese { get; private set; }
 
-    public Car(CarBuilder builder)
+    private Pizza(PizzaBuilder builder)
     {
-        Make = builder.Make;
-        Model = builder.Model;
-        Year = builder.Year;
-        Color = builder.Color;
+        Dough = builder.Dough;
+        Sauce = builder.Sauce;
+        Toppings = builder.Toppings;
+        IsExtraCheese = builder.IsExtraCheese;
     }
 
-    public class CarBuilder
+    public class PizzaBuilder
     {
-        public string Make { get; private set; } = "";
-        public string Model { get; private set; } = "";
-        public int Year { get; private set; }
-        public string Color { get; private set; } = "";
+        public string Dough { get; private set; } = "";
+        public string Sauce { get; private set; } = "";
+        public string Toppings { get; private set; } = "";
+        public bool IsExtraCheese { get; private set; }
 
-        public CarBuilder SetMake(string make)
+        public PizzaBuilder WithDough(string dough)
         {
-            Make = make;
+            Dough = dough;
             return this;
         }
 
-        public CarBuilder SetModel(string model)
+        public PizzaBuilder WithSauce(string sauce)
         {
-            Model = model;
+            Sauce = sauce;
             return this;
         }
 
-        public CarBuilder SetYear(int year)
+        public PizzaBuilder WithToppings(string toppings)
         {
-            Year = year;
+            Toppings = toppings;
             return this;
         }
 
-        public CarBuilder SetColor(string color)
+        public PizzaBuilder AddExtraCheese(bool isExtraCheese)
         {
-            Color = color;
+            IsExtraCheese = isExtraCheese;
             return this;
         }
 
-        public Car Build()
+        public Pizza Build()
         {
-            return new Car(this);
+            return new Pizza(this);
         }
     }
 }

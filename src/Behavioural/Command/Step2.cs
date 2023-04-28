@@ -1,11 +1,5 @@
 namespace Command;
 
-public interface ICommand
-{
-    void Execute();
-    void Undo();
-}
-
 public class InsertTextCommand : ICommand
 {
     private string _text;
