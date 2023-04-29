@@ -1,6 +1,6 @@
  # Interpreter
  
-## Description
+## Definition
 
 The Interpreter pattern is a behavioral design pattern that provides a way to evaluate language grammar or expressions. It involves defining a representation for the grammar and an interpreter to process it. In a real-world example, we could use the Interpreter pattern to create a simple calculator that interprets arithmetic expressions.
 

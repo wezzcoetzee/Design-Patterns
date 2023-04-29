@@ -1,6 +1,6 @@
 # Chain of Responsibility
 
-## Description
+## Definition
 
 The Chain of Responsibility pattern is a design pattern that allows multiple objects to handle a request, either individually or by passing the request along the chain. This pattern can be useful for decoupling the sender of a request from the receiver, allowing for greater flexibility in code.
 
